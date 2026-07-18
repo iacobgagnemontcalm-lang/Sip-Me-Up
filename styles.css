@@ -23,6 +23,11 @@
 
   --radius: 22px;
   --shadow: 0 10px 30px rgba(74, 66, 56, 0.10);
+
+  /* Échelle commune : rayures et illustrations proviennent de la même
+     image source (période 58px), donc tout est mis à l'échelle ensemble
+     pour que les rayures des visuels s'alignent avec le fond. */
+  --stripe-scale: 0.62;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -49,15 +54,14 @@ img, svg { max-width: 100%; display: block; }
 .center { text-align: center; margin-top: 2.5rem; }
 .center-text { text-align: center; margin-inline: auto; }
 
-/* Fond rayé signature (comme les publications Instagram) */
+/* Fond rayé signature, échantillonné depuis les visuels de la marque.
+   Ancré au centre pour s'aligner avec les illustrations centrées. */
 .striped {
-  background: repeating-linear-gradient(
-    90deg,
-    var(--stripe-a) 0px,
-    var(--stripe-a) 42px,
-    var(--stripe-b) 42px,
-    var(--stripe-b) 84px
-  );
+  background-color: var(--stripe-b);
+  background-image: url("images/stripes-tile.png");
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: calc(58px * var(--stripe-scale)) auto;
 }
 
 /* ===== Boutons ===== */
@@ -242,14 +246,22 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .hero-drink {
-  width: clamp(200px, 30vw, 290px);
-  margin: 2.2rem auto 0;
+  width: calc(490px * var(--stripe-scale));
+  max-width: 92vw;
+  margin: 1.6rem auto 0;
   animation: floaty 4s ease-in-out infinite;
 }
 
-.section-drink {
-  width: clamp(160px, 20vw, 210px);
-  margin: 0 auto 2.2rem;
+.hero-drink img,
+.offer-drink img {
+  width: 100%;
+  height: auto;
+}
+
+.offer-drink {
+  width: calc(590px * var(--stripe-scale));
+  max-width: 92vw;
+  margin: 0 auto 2rem;
 }
 
 @keyframes floaty {
@@ -499,4 +511,9 @@ img, svg { max-width: 100%; display: block; }
   .nav-links.open { display: flex; }
 
   .hero { padding: 3.5rem 0 6rem; }
+}
+
+@media (max-width: 480px) {
+  /* réduit ensemble rayures et illustrations pour garder l'alignement */
+  :root { --stripe-scale: 0.48; }
 }
