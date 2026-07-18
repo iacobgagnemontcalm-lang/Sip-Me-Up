@@ -247,6 +247,11 @@ img, svg { max-width: 100%; display: block; }
   animation: floaty 4s ease-in-out infinite;
 }
 
+.section-drink {
+  width: clamp(160px, 20vw, 210px);
+  margin: 0 auto 2.2rem;
+}
+
 @keyframes floaty {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }

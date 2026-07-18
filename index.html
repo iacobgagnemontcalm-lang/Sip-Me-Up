@@ -79,50 +79,43 @@
             </defs>
 
             <!-- ombre au sol -->
-            <ellipse cx="152" cy="318" rx="80" ry="10" fill="#8a7a5f" opacity="0.16" filter="url(#soft)"/>
+            <ellipse cx="150" cy="314" rx="76" ry="10" fill="#8a7a5f" opacity="0.16" filter="url(#soft)"/>
 
-            <!-- paille verte -->
-            <path d="M154 150 C158 100 164 50 172 14" stroke="#a6c6ab" stroke-width="9" stroke-linecap="round" fill="none" filter="url(#wc)"/>
-            <path d="M157 144 C161 100 166 54 173 20" stroke="#cbdecc" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+            <!-- paille verte inclinée -->
+            <path d="M150 140 C156 100 163 58 172 20" stroke="#9cbb9d" stroke-width="10" stroke-linecap="round" fill="none" filter="url(#wc)"/>
+            <path d="M153 134 C158 100 165 62 173 26" stroke="#c2d8c2" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
 
-            <!-- verre arrondi -->
-            <g filter="url(#wc)">
-              <path d="M98 96 C90 130 80 170 82 216 C84 264 100 302 151 302 C202 302 218 264 220 216 C222 170 212 130 204 96 C170 88 132 88 98 96 Z" fill="#fbeeec" opacity="0.92"/>
-            </g>
-
-            <!-- boisson : lavis aquarelle rose -->
+            <!-- corps crémeux au sommet mousseux irrégulier -->
             <g filter="url(#wash)">
-              <path d="M100 148 C93 176 88 202 90 232 C93 272 110 294 151 294 C192 294 209 272 212 232 C214 202 209 176 202 148 C168 138 134 138 100 148 Z" fill="#f5c9d0" opacity="0.9"/>
-              <path d="M104 186 C99 210 98 234 104 254 C112 280 136 288 152 288 C172 288 190 278 198 254 C204 234 203 210 198 188 C168 176 134 176 104 186 Z" fill="#eeb2be" opacity="0.55"/>
-              <path d="M126 236 C122 254 128 268 140 276 C152 282 164 280 174 272 C184 262 188 248 184 234 C164 226 142 226 126 236 Z" fill="#c08a84" opacity="0.35"/>
-              <path d="M116 266 C126 288 140 294 152 294 C166 294 180 288 186 272 C174 282 158 286 146 283 C134 280 122 274 116 266 Z" fill="#6b4a45" opacity="0.6"/>
-              <path d="M104 150 C130 142 172 142 198 150 C172 158 130 158 104 150 Z" fill="#ffffff" opacity="0.5"/>
+              <path d="M94 136 C86 168 80 212 86 250 C92 290 116 306 150 306 C186 306 210 290 216 250 C222 210 218 166 208 136 C214 124 206 112 196 118 C192 104 176 100 166 110 C160 98 142 96 134 108 C122 98 106 104 106 118 C96 116 88 126 94 136 Z" fill="#f8ded2" opacity="0.95"/>
+              <path d="M100 160 C92 194 90 232 96 258 C104 288 126 298 150 298 C176 298 198 286 206 256 C212 230 210 194 202 162 C170 150 132 150 100 160 Z" fill="#f3c9b8" opacity="0.55"/>
+              <path d="M120 200 C112 226 116 254 130 272 C144 284 168 282 180 268 C192 252 194 224 188 204 C166 194 140 194 120 200 Z" fill="#eab09e" opacity="0.4"/>
+              <path d="M96 250 C100 276 112 292 128 298 C118 282 110 264 108 244 Z" fill="#4f3d35" opacity="0.5"/>
+              <path d="M104 268 C114 288 130 298 148 300 C132 292 118 282 110 266 Z" fill="#3c2e28" opacity="0.45"/>
             </g>
 
-            <!-- glaçons -->
-            <g filter="url(#wash)">
-              <path d="M106 160 L142 154 L148 188 L112 194 Z" fill="#ffffff" opacity="0.55"/>
-              <path d="M154 164 L190 160 L194 192 L160 196 Z" fill="#fff6f6" opacity="0.45"/>
-              <path d="M98 208 L130 202 L136 236 L104 242 Z" fill="#ffffff" opacity="0.4"/>
-              <path d="M156 210 L190 206 L192 238 L162 244 Z" fill="#fff2f3" opacity="0.35"/>
-              <path d="M126 246 L158 242 L162 270 L130 274 Z" fill="#ffffff" opacity="0.3"/>
+            <!-- volutes de crème -->
+            <g filter="url(#wash)" stroke-linecap="round" fill="none">
+              <path d="M112 140 C130 128 158 128 176 140 C158 150 128 150 112 140" fill="#fdf2ea" opacity="0.85"/>
+              <path d="M108 176 C124 164 148 168 158 180" stroke="#ffffff" stroke-width="12" opacity="0.55"/>
+              <path d="M170 196 C186 190 196 200 194 214" stroke="#ffffff" stroke-width="11" opacity="0.5"/>
+              <path d="M116 226 C132 218 152 222 162 234" stroke="#fff6ef" stroke-width="13" opacity="0.5"/>
+              <path d="M140 258 C156 250 174 254 182 264" stroke="#ffffff" stroke-width="10" opacity="0.4"/>
+              <path d="M96 190 C92 214 92 240 98 260" stroke="#ffffff" stroke-width="9" opacity="0.45"/>
             </g>
 
-            <!-- reflet -->
-            <path d="M98 130 C90 170 88 224 96 258" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.45" filter="url(#soft)"/>
-
-            <!-- bord du verre -->
-            <path d="M98 96 C132 88 170 88 204 96" stroke="#eed6d3" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9" filter="url(#wc)"/>
-
-            <!-- rondelle de lime sur le rebord -->
+            <!-- rondelle de lime -->
             <g filter="url(#wc)">
-              <circle cx="207" cy="82" r="40" fill="#b9cc82"/>
-              <circle cx="207" cy="82" r="33" fill="#f4f6da"/>
-              <g stroke="#d5e0a4" stroke-width="4">
-                <path d="M207 52 V112 M177 82 H237 M186 61 L228 103 M186 103 L228 61"/>
+              <circle cx="203" cy="110" r="39" fill="#b9d067"/>
+              <circle cx="203" cy="110" r="31" fill="#e4efb4"/>
+              <g stroke="#f6fadf" stroke-width="5">
+                <path d="M203 82 V138 M175 110 H231 M183 90 L223 130 M183 130 L223 90"/>
               </g>
-              <circle cx="207" cy="82" r="33" fill="none" stroke="#e6ecc0" stroke-width="2"/>
+              <circle cx="203" cy="110" r="31" fill="none" stroke="#f0f6cf" stroke-width="3"/>
             </g>
+
+            <!-- volute de mousse devant la lime -->
+            <path d="M178 144 C198 138 208 120 202 100" stroke="#fbeee4" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.95" filter="url(#wash)"/>
           </svg>
         </div>
       </div>
@@ -197,6 +190,96 @@
       <div class="container">
         <p class="section-eyebrow">Comment ça fonctionne 🍋</p>
         <h2 class="section-title">Aussi simple que 1, 2, 3</h2>
+
+        <!-- Illustration : verre kiwi-framboise façon aquarelle -->
+        <div class="section-drink" aria-hidden="true">
+          <svg viewBox="0 0 300 340" role="img">
+            <defs>
+              <filter id="wc2" x="-30%" y="-30%" width="160%" height="160%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="5" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="8" result="d"/>
+                <feGaussianBlur in="d" stdDeviation="1"/>
+              </filter>
+              <filter id="wash2" x="-40%" y="-40%" width="180%" height="180%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="11" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="12" result="d"/>
+                <feGaussianBlur in="d" stdDeviation="2"/>
+              </filter>
+              <filter id="soft2" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4"/>
+              </filter>
+            </defs>
+
+            <!-- ombre au sol -->
+            <ellipse cx="152" cy="312" rx="70" ry="9" fill="#8a7a5f" opacity="0.15" filter="url(#soft2)"/>
+
+            <!-- paille bleue -->
+            <path d="M136 130 C126 96 116 66 104 34" stroke="#a9d6e8" stroke-width="13" stroke-linecap="round" fill="none" filter="url(#wc2)"/>
+            <path d="M132 124 C123 96 114 70 104 42" stroke="#cfe9f4" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+            <!-- verre évasé -->
+            <g filter="url(#wc2)">
+              <path d="M92 96 C90 100 92 112 94 128 L112 284 C114 300 126 306 151 306 C176 306 188 300 190 284 L208 128 C210 112 212 100 210 96 C172 86 130 86 92 96 Z" fill="#f6fafb" opacity="0.7"/>
+              <path d="M92 96 C130 86 172 86 210 96" stroke="#cfe0e6" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9"/>
+              <path d="M112 284 C114 300 126 306 151 306 C176 306 188 300 190 284" stroke="#d8e6ea" stroke-width="4" fill="none" opacity="0.8"/>
+            </g>
+
+            <!-- liquide pâle -->
+            <g filter="url(#wash2)">
+              <path d="M98 120 L114 280 C116 294 128 298 151 298 C174 298 186 294 188 280 L204 120 C170 110 132 110 98 120 Z" fill="#f4ecc9" opacity="0.75"/>
+              <path d="M104 170 L116 272 C120 286 132 290 151 290 C170 290 182 286 186 272 L196 178 C166 168 134 168 104 170 Z" fill="#eee3ae" opacity="0.5"/>
+            </g>
+
+            <!-- kiwis au fond -->
+            <g filter="url(#wc2)">
+              <circle cx="138" cy="252" r="25" fill="#c9d98e"/>
+              <circle cx="138" cy="252" r="16" fill="#e8eec2"/>
+              <g fill="#5f6b3a"><circle cx="130" cy="244" r="1.8"/><circle cx="146" cy="244" r="1.8"/><circle cx="128" cy="256" r="1.8"/><circle cx="148" cy="257" r="1.8"/><circle cx="138" cy="264" r="1.8"/><circle cx="138" cy="240" r="1.8"/></g>
+              <circle cx="174" cy="262" r="21" fill="#c2d385"/>
+              <circle cx="174" cy="262" r="13" fill="#e4ebbc"/>
+              <g fill="#5f6b3a"><circle cx="168" cy="255" r="1.6"/><circle cx="181" cy="256" r="1.6"/><circle cx="167" cy="268" r="1.6"/><circle cx="180" cy="269" r="1.6"/></g>
+            </g>
+
+            <!-- gros glaçons -->
+            <g filter="url(#wash2)">
+              <path d="M120 128 L158 122 L166 162 L128 170 Z" fill="#ffffff" opacity="0.7"/>
+              <path d="M150 160 L184 154 L188 194 L156 200 Z" fill="#fbfdf6" opacity="0.55"/>
+              <path d="M112 180 L142 174 L148 214 L118 220 Z" fill="#ffffff" opacity="0.5"/>
+            </g>
+
+            <!-- framboises -->
+            <g filter="url(#wc2)">
+              <g fill="#f0a58d">
+                <circle cx="122" cy="116" r="6"/><circle cx="134" cy="112" r="6"/><circle cx="128" cy="124" r="6"/><circle cx="140" cy="122" r="6"/><circle cx="134" cy="132" r="5"/>
+              </g>
+              <g fill="#eb9b95">
+                <circle cx="182" cy="196" r="5.5"/><circle cx="193" cy="192" r="5.5"/><circle cx="186" cy="205" r="5.5"/><circle cx="196" cy="202" r="5"/>
+              </g>
+            </g>
+
+            <!-- perles roses -->
+            <g filter="url(#wc2)">
+              <circle cx="160" cy="118" r="6" fill="#d98ca0"/>
+              <circle cx="112" cy="152" r="5" fill="#cf8f9e"/>
+              <circle cx="196" cy="140" r="5.5" fill="#d98ca0"/>
+              <circle cx="126" cy="212" r="5" fill="#d494a2"/>
+              <circle cx="170" cy="228" r="4.5" fill="#cf8f9e"/>
+            </g>
+
+            <!-- feuilles -->
+            <g filter="url(#wc2)" fill="#a9bb8f">
+              <path d="M210 102 C228 88 246 88 252 96 C244 110 224 116 208 110 Z"/>
+              <path d="M70 296 C84 284 100 282 106 290 C98 300 82 306 68 302 Z" opacity="0.9"/>
+            </g>
+            <circle cx="112" cy="308" r="6" fill="#c76d7e" filter="url(#wc2)"/>
+
+            <!-- bulles -->
+            <g fill="#ffffff" opacity="0.6">
+              <circle cx="150" cy="140" r="3"/><circle cx="170" cy="176" r="2.5"/><circle cx="132" cy="192" r="2.5"/><circle cx="158" cy="216" r="3"/><circle cx="144" cy="236" r="2"/>
+            </g>
+          </svg>
+        </div>
+
         <ol class="steps">
           <li class="step">
             <span class="step-num">1</span>
