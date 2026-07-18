@@ -21,7 +21,7 @@
     <nav class="nav container">
       <a href="#accueil" class="brand" aria-label="Sip Me Up — Accueil">
         <span class="brand-mark">SMU</span>
-        <span class="brand-name">Sip me up</span>
+        <span class="brand-name" aria-hidden="true">S<span class="i-dot">ı</span>p me up</span>
       </a>
       <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span><span></span><span></span>
@@ -45,9 +45,9 @@
     <!-- ===== Hero ===== -->
     <section class="hero striped" id="accueil">
       <div class="container hero-inner">
-        <p class="hero-eyebrow">Bar à sodas mobile · Sans alcool</p>
-        <h1 class="hero-title">Sip <span class="dot-i">me</span> up</h1>
-        <p class="hero-sub">Where Every Sip Hits Different.</p>
+        <h1 class="hero-title" aria-label="Sip me up"><span aria-hidden="true">S<span class="i-dot">ı</span>p me up</span></h1>
+        <p class="hero-sub">Bar à sodas</p>
+        <p class="hero-tagline">Where Every Sip Hits Different.</p>
         <p class="hero-text">
           Un bar à sodas mobile sans alcool pensé pour les événements
           qui veulent sortir du classique — à Gatineau et Ottawa.
@@ -59,23 +59,70 @@
           <a class="btn btn-ghost" href="#apropos">Découvrir Sip Me Up</a>
         </div>
 
-        <!-- Illustration : verre de soda -->
+        <!-- Illustration : verre de soda rose façon aquarelle -->
         <div class="hero-drink" aria-hidden="true">
-          <svg viewBox="0 0 200 260" role="img">
-            <ellipse cx="100" cy="248" rx="58" ry="8" fill="rgba(125,146,101,.15)"/>
-            <path d="M55 80 Q50 90 52 120 L58 210 Q60 240 100 240 Q140 240 142 210 L148 120 Q150 90 145 80 Z" fill="#f7cdd4" opacity="0.9"/>
-            <path d="M55 80 Q50 90 52 120 L58 210 Q60 240 100 240 Q140 240 142 210 L148 120 Q150 90 145 80 Z" fill="none" stroke="#e9aab5" stroke-width="3"/>
-            <path d="M62 100 Q60 110 62 130 L66 200 Q68 224 100 224 Q132 224 134 200 L138 130 Q140 110 138 100 Z" fill="#fbdfe4"/>
-            <circle cx="82" cy="150" r="10" fill="#fff" opacity="0.7"/>
-            <circle cx="115" cy="180" r="13" fill="#fff" opacity="0.55"/>
-            <circle cx="100" cy="120" r="8" fill="#fff" opacity="0.6"/>
-            <rect x="112" y="8" width="9" height="92" rx="4.5" fill="#a8c8b8" transform="rotate(8 116 54)"/>
-            <circle cx="140" cy="88" r="26" fill="#cfe3a8" stroke="#9db56f" stroke-width="4"/>
-            <circle cx="140" cy="88" r="17" fill="#e8f2cd"/>
-            <path d="M140 71 v34 M123 88 h34 M128 76 l24 24 M128 100 l24 -24" stroke="#cfe3a8" stroke-width="3"/>
-            <circle cx="88" cy="70" r="7" fill="#d94f5c"/>
-            <circle cx="103" cy="64" r="7" fill="#d94f5c"/>
-            <path d="M88 63 Q92 48 100 46 M103 57 Q100 48 100 46" stroke="#7d9265" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <svg viewBox="0 0 300 340" role="img">
+            <defs>
+              <filter id="wc" x="-30%" y="-30%" width="160%" height="160%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="4" seed="8" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="9" result="d"/>
+                <feGaussianBlur in="d" stdDeviation="1.1"/>
+              </filter>
+              <filter id="wash" x="-40%" y="-40%" width="180%" height="180%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="3" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="14" result="d"/>
+                <feGaussianBlur in="d" stdDeviation="2.4"/>
+              </filter>
+              <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4"/>
+              </filter>
+            </defs>
+
+            <!-- ombre au sol -->
+            <ellipse cx="152" cy="318" rx="80" ry="10" fill="#8a7a5f" opacity="0.16" filter="url(#soft)"/>
+
+            <!-- paille verte -->
+            <path d="M154 150 C158 100 164 50 172 14" stroke="#a6c6ab" stroke-width="9" stroke-linecap="round" fill="none" filter="url(#wc)"/>
+            <path d="M157 144 C161 100 166 54 173 20" stroke="#cbdecc" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+            <!-- verre arrondi -->
+            <g filter="url(#wc)">
+              <path d="M98 96 C90 130 80 170 82 216 C84 264 100 302 151 302 C202 302 218 264 220 216 C222 170 212 130 204 96 C170 88 132 88 98 96 Z" fill="#fbeeec" opacity="0.92"/>
+            </g>
+
+            <!-- boisson : lavis aquarelle rose -->
+            <g filter="url(#wash)">
+              <path d="M100 148 C93 176 88 202 90 232 C93 272 110 294 151 294 C192 294 209 272 212 232 C214 202 209 176 202 148 C168 138 134 138 100 148 Z" fill="#f5c9d0" opacity="0.9"/>
+              <path d="M104 186 C99 210 98 234 104 254 C112 280 136 288 152 288 C172 288 190 278 198 254 C204 234 203 210 198 188 C168 176 134 176 104 186 Z" fill="#eeb2be" opacity="0.55"/>
+              <path d="M126 236 C122 254 128 268 140 276 C152 282 164 280 174 272 C184 262 188 248 184 234 C164 226 142 226 126 236 Z" fill="#c08a84" opacity="0.35"/>
+              <path d="M116 266 C126 288 140 294 152 294 C166 294 180 288 186 272 C174 282 158 286 146 283 C134 280 122 274 116 266 Z" fill="#6b4a45" opacity="0.6"/>
+              <path d="M104 150 C130 142 172 142 198 150 C172 158 130 158 104 150 Z" fill="#ffffff" opacity="0.5"/>
+            </g>
+
+            <!-- glaçons -->
+            <g filter="url(#wash)">
+              <path d="M106 160 L142 154 L148 188 L112 194 Z" fill="#ffffff" opacity="0.55"/>
+              <path d="M154 164 L190 160 L194 192 L160 196 Z" fill="#fff6f6" opacity="0.45"/>
+              <path d="M98 208 L130 202 L136 236 L104 242 Z" fill="#ffffff" opacity="0.4"/>
+              <path d="M156 210 L190 206 L192 238 L162 244 Z" fill="#fff2f3" opacity="0.35"/>
+              <path d="M126 246 L158 242 L162 270 L130 274 Z" fill="#ffffff" opacity="0.3"/>
+            </g>
+
+            <!-- reflet -->
+            <path d="M98 130 C90 170 88 224 96 258" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.45" filter="url(#soft)"/>
+
+            <!-- bord du verre -->
+            <path d="M98 96 C132 88 170 88 204 96" stroke="#eed6d3" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9" filter="url(#wc)"/>
+
+            <!-- rondelle de lime sur le rebord -->
+            <g filter="url(#wc)">
+              <circle cx="207" cy="82" r="40" fill="#b9cc82"/>
+              <circle cx="207" cy="82" r="33" fill="#f4f6da"/>
+              <g stroke="#d5e0a4" stroke-width="4">
+                <path d="M207 52 V112 M177 82 H237 M186 61 L228 103 M186 103 L228 61"/>
+              </g>
+              <circle cx="207" cy="82" r="33" fill="none" stroke="#e6ecc0" stroke-width="2"/>
+            </g>
           </svg>
         </div>
       </div>
@@ -245,7 +292,7 @@
   <!-- ===== Footer ===== -->
   <footer class="site-footer striped">
     <div class="container footer-inner">
-      <p class="footer-brand">Sip me up <span class="footer-tag">Bar à sodas</span></p>
+      <p class="footer-brand" aria-label="Sip me up"><span aria-hidden="true">S<span class="i-dot">ı</span>p me up</span> <span class="footer-tag">Bar à sodas</span></p>
       <p class="footer-line">Dirty sodas cart for events 🫧 · Gatineau | Ottawa</p>
       <p class="footer-line">
         <a href="mailto:booksipmeup@outlook.com">booksipmeup@outlook.com</a> ·
